@@ -1,10 +1,15 @@
-# Ignore everything in the root except the "wp-content" directory.
-/*
-!.gitignore
-!wp-content/
+# Exclude these files from the git repo
+wp-content/backup/*
+wp-content/cache/*
+wp-content/upgrade/*
+wp-content/uploads/*
+sitemap.*
+wp-config.php
  
-# Ignore everything in the "wp-content" directory, except the "plugins"
-# and "themes" directories.
-wp-content/*
-!wp-content/plugins/
-!wp-content/themes/
+# Hidden system files
+*.DS_Store
+*[Tt]humbs.db
+*.Trashes
+ 
+# Include these files in previously blocked directories
+!wp-content/uploads/.htaccess
